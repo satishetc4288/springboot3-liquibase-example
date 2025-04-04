@@ -62,28 +62,6 @@
 					<diffChangeLogFile>src/main/resources/db/changelog/migration/_${diff.version}_migrate.sql</diffChangeLogFile>
 					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
 				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.liquibase.ext</groupId>
-						<artifactId>liquibase-hibernate6</artifactId>
-						<version>${liquibase-hibernate.version}</version>
-					</dependency>
-					<dependency>
-						<groupId>org.springframework.data</groupId>
-						<artifactId>spring-data-jpa</artifactId>
-						<version>3.0.2</version>
-					</dependency>
-					<dependency>
-						<groupId>io.hypersistence</groupId>
-						<artifactId>hypersistence-utils-hibernate-60</artifactId>
-						<version>3.2.0</version>
-					</dependency>
-					<dependency>
-						<groupId>com.fasterxml.jackson.core</groupId>
-						<artifactId>jackson-databind</artifactId>
-						<version>2.14.2</version>
-					</dependency>
-				</dependencies>
 			</plugin>
 		</plugins>
 	</build>
