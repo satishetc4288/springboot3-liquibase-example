@@ -28,37 +28,16 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.liquibase</groupId>
 			<artifactId>liquibase-core</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
+			<version>42.7.2</version>
 			<scope>runtime</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -83,7 +62,6 @@
 					<diffChangeLogFile>src/main/resources/db/changelog/migration/_${diff.version}_migrate.sql</diffChangeLogFile>
 					<propertyFile>src/main/resources/liquibase.properties</propertyFile>
 				</configuration>
-
 				<dependencies>
 					<dependency>
 						<groupId>org.liquibase.ext</groupId>
@@ -105,9 +83,7 @@
 						<artifactId>jackson-databind</artifactId>
 						<version>2.14.2</version>
 					</dependency>
-
 				</dependencies>
-
 			</plugin>
 		</plugins>
 	</build>
